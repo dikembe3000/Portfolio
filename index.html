@@ -10,6 +10,63 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+  /* --- Portfolio Hero Overrides --- */
+  :root {
+    --brand: #2563eb; /* change this to your accent color */
+  }
+  #header #logo h1 a { font-weight: 700; letter-spacing: .3px; }
+  #header #logo span { display:none; } /* hide 'by HTML5 UP' */
+  #banner-wrapper {
+    background: radial-gradient(900px 400px at 85% -10%, rgba(37,99,235,.12), transparent 60%);
+    padding: 3.5em 0 2.5em 0;
+  }
+  #banner.box {
+    border: none;
+    background: #fff;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(6px);
+  }
+  body.homepage #banner h1, 
+  body.homepage #banner h2 {
+    font-size: 2.2em;
+    line-height: 1.2;
+    margin: 0 0 .3em 0;
+  }
+  #banner p.lede {
+    font-size: 1.1em;
+    color: #9aa4b2;
+    margin: 0 0 1.2em 0;
+  }
+  .hero-tags {
+    display:flex; gap:.5em; flex-wrap:wrap; margin:0 0 1.2em 0;
+  }
+  .hero-tag {
+    font-size: .8em;
+    padding:.35em .6em;
+    border-radius: 999px;
+    background: rgba(37,99,235,.15);
+    color: #cfe0ff;
+  }
+  .hero-actions .button {
+    margin-right:.6em;
+  }
+  .button.primary {
+    background: var(--brand) !important;
+    border-color: var(--brand) !important;
+    color:#fff !important;
+  }
+  .hero-avatar {
+    display:block; max-width: 260px; width:100%;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 980px){
+    body.homepage #banner h1, body.homepage #banner h2 { font-size:1.8em; }
+  }
+</style>
+
 	</head>
 	<body class="is-preload homepage">
 		<div id="page-wrapper">
@@ -260,3 +317,4 @@
 	</body>
 
 </html>
+
