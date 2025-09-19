@@ -20,7 +20,7 @@
 
       /* AI Examples */
       .ai-examples .example-list { display:grid; gap:.75rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
-      .ai-examples button { padding:1rem; border:1px solid #d2d6dc; border-radius:10px; background:#fff; font-weight:600; cursor:pointer; text-align:left; transition:.2s; }
+      .ai-examples button { padding:1rem; border:1px solid #d2d6dc; border-radius:10px; background:#fff; font-weight:600; cursor:pointer; text-align:center; transition:.2s; color:#0f172a; }
       .ai-examples button:hover { border-color: var(--brand); box-shadow:0 4px 12px rgba(0,0,0,.08); }
 
       /* Modal */
@@ -73,16 +73,26 @@
         </header>
         <div class="example-list">
           <button data-title="Zero-Shot Prompt" data-prompt="Summarize this article in 5 bullet points.">Zero-Shot Prompt</button>
-          <button data-title="Few-Shot Prompt" data-prompt="I want you to answer questions about major flood events using short summaries...">Few-Shot Prompt</button>
-          <button data-title="Instructional Prompt (Journalistic)" data-prompt="Write a magazine-style feature article about the 1964 Christmas Flood in Humboldt County...">Instructional Prompt (Journalistic)</button>
-          <button data-title="Instructional Prompt (Government Report)" data-prompt="Write a government report summary about the 1964 Christmas Flood for the U.S. Department of the Interior...">Instructional Prompt (Government Report)</button>
-          <button data-title="Role-Based Prompt (New Resident)" data-prompt="You are someone moving from a desert region to Humboldt County...">Role-Based Prompt (New Resident)</button>
-          <button data-title="Role-Based Prompt (Insurance Agent)" data-prompt="You are an insurance agent tasked with writing a report to help set homeowner insurance premiums in Humboldt County...">Role-Based Prompt (Insurance Agent)</button>
-          <button data-title="Contextual Prompt (Undergraduate)" data-prompt="This explanation is for an undergraduate geography class learning about natural disasters...">Contextual Prompt (Undergraduate)</button>
-          <button data-title="Contextual Prompt (Local Newspaper)" data-prompt="This article will appear in a local Humboldt newspaper’s 60-year retrospective...">Contextual Prompt (Local Newspaper)</button>
-          <button data-title="Contextual Prompt (Policy Brief)" data-prompt="This summary is intended for a California state government policy briefing on climate resilience...">Contextual Prompt (Policy Brief)</button>
-          <button data-title="Contextual Prompt (High School)" data-prompt="This text is meant for high school students studying California history...">Contextual Prompt (High School)</button>
-          <button data-title="High-Level Prompt" data-prompt="You are a local historian and scholar... Generate a detailed report on the great flood of 1964 in Humboldt County CA...">High-Level Prompt</button>
+
+          <button data-title="Few-Shot Prompt" data-prompt="I want you to answer questions about major flood events using short summaries. Here are two examples:\nExample 1:\nQ: What happened during the Johnstown Flood of 1889?\nA: The Johnstown Flood of 1889 occurred when the South Fork Dam failed after heavy rain. A massive wall of water destroyed the town of Johnstown, Pennsylvania. Over 2,200 people were killed, and thousands of homes were swept away. Relief efforts were led by the American Red Cross under Clara Barton.\nExample 2:\nQ: What was the impact of the Great Mississippi Flood of 1927?\nA: The Great Mississippi Flood of 1927 was caused by months of heavy rainfall. The Mississippi River broke levees across multiple states, displacing over 600,000 people. African American communities were disproportionately affected, and the disaster reshaped U.S. flood control policy.\nNow Answer This:\nQ: What happened during the Christmas Flood of 1964?">Few-Shot Prompt</button>
+
+          <button data-title="Instructional Prompt (Journalistic)" data-prompt="Write a magazine-style feature article about the 1964 Christmas Flood in Humboldt County. Use vivid, emotional, and descriptive language as if you are a journalist for Rolling Stone. Focus on the human impact, the sense of chaos during the holiday season, and the cultural memory of the flood. Include quotes (imagined if necessary) from survivors and rescuers to bring the story to life.">Instructional Prompt (Journalistic)</button>
+
+          <button data-title="Instructional Prompt (Government Report)" data-prompt="Write a government report summary about the 1964 Christmas Flood for the U.S. Department of the Interior. Use a formal and technical tone. Include key details such as precipitation levels, geographic areas affected, infrastructure damage, estimated casualties, and long-term policy implications for flood management. Present the information in clear, objective, and concise language.">Instructional Prompt (Government Report)</button>
+
+          <button data-title="Role-Based Prompt (New Resident)" data-prompt="You are someone moving from a desert region to Humboldt County, California. You have never lived in a place with heavy rainfall or river systems before. Explain the history of flooding in the area, especially the 1964 Christmas Flood, and describe what a newcomer should know about current flood risks, emergency preparedness, and how living near rivers differs from living in the desert.">Role-Based Prompt (New Resident)</button>
+
+          <button data-title="Role-Based Prompt (Insurance Agent)" data-prompt="You are an insurance agent tasked with writing a report to help set homeowner insurance premiums in Humboldt County, California. Use historical evidence from the 1964 Christmas Flood and more recent flood data to explain the flood risk profile. Include sections on: historical precedent, high-risk zones, climate change impacts, and recommendations for premium adjustments. Write in a professional, data-driven tone suitable for an internal company risk assessment.">Role-Based Prompt (Insurance Agent)</button>
+
+          <button data-title="Contextual Prompt (Undergraduate)" data-prompt="This explanation is for an undergraduate geography class learning about natural disasters. Summarize the 1964 Christmas Flood in Humboldt County in plain, accessible language, focusing on causes, impacts, and lessons learned.">Contextual Prompt (Undergraduate)</button>
+
+          <button data-title="Contextual Prompt (Local Newspaper)" data-prompt="This article will appear in a local Humboldt newspaper’s 60-year retrospective on the 1964 Christmas Flood. Write a community-focused piece that blends history with personal memory, honoring the resilience of local towns.">Contextual Prompt (Local Newspaper)</button>
+
+          <button data-title="Contextual Prompt (Policy Brief)" data-prompt="This summary is intended for a California state government policy briefing on climate resilience. Describe the 1964 Christmas Flood as a historical case study, emphasizing the infrastructural damage, long-term policy impacts, and relevance for modern flood planning.">Contextual Prompt (Policy Brief)</button>
+
+          <button data-title="Contextual Prompt (High School)" data-prompt="This text is meant for high school students studying California history. Explain the 1964 Christmas Flood in a way that is engaging, easy to follow, and connects to broader themes of human-environment interaction.">Contextual Prompt (High School)</button>
+
+          <button data-title="High-Level Prompt" data-prompt="You are a local historian and scholar who has studied the archives, including the Humboldt Historical Society, Cal Poly Humboldt Special Collections, and other local and regional sources. I am newly arrived student in Humboldt County and would like to become more familiar with the history of floods in the area, get a sense of the conditions that caused the flood, and particular communities that were affected, understand the scale and damage of the flood, and understand the risk for future flood events. This is part of a class project where each student will be using AI to generate a local history of the area for a digital archive project. Generate a detailed report on the great flood of 1964 in Humboldt County CA. The report should be 3500-4000 words. I would like the returned document to have the following elements: 1) references, 2) links to pictures, maps, and documents, 3) tables where necessary, 4) be of professional quality. Here is a good example of an output about a large flood event in Asheville in 1916 https://www.ashevillenc.gov/news/100-years-after-the-flood-of-1916-the-city-of-asheville-is-ready-for-the-next-one/ Use clear and concise language in a formal academic tone with APA style citations. The rhetorical style should be ethos.">High-Level Prompt</button>
         </div>
       </section>
 
@@ -118,6 +128,7 @@
       document.querySelector('.modal-close').addEventListener('click', () => {
         modal.style.display = 'none';
       });
+      modal.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
       copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(modalText.textContent).then(() => {
           copyBtn.textContent = 'Copied!';
