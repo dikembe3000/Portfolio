@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nick Perdue — Portfolio</title>
-    <meta name="description" content="Portfolio of Nick Perdue — Geography, Remote Sensing, GIS, and Data Visualization." />
+    <title>Nicholas Perdue — Portfolio</title>
+    <meta name="description" content="Portfolio of Nicholas Perdue — Department of Geography, Environment & Spatial Analysis, Cal Poly Humboldt." />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,14 @@
 
       /* Modal */
       .modal { position:fixed; inset:0; background:rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; z-index:1000; }
-      .modal-content { background:#1e293b; color:#f1f5f9; padding:1.5rem; border-radius:12px; max-width:900px; max-height:90vh; overflow:auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; position:relative; }
-      .modal-content pre { white-space:pre-wrap; word-wrap:break-word; background:#0f172a; padding:1rem; border-radius:8px; font-size:.95em; color:#f8fafc; }
-      .modal-close { background:none; border:none; font-size:1.5rem; color:#f1f5f9; position:absolute; top:.75rem; right:1rem; cursor:pointer; }
-      .copy-btn { position:absolute; top:.75rem; right:3rem; background:#334155; border:none; color:#f1f5f9; padding:.3rem .6rem; border-radius:6px; font-size:.85em; cursor:pointer; }
-      .copy-btn:hover { background:#475569; }
+      .modal-content { background:#1e293b; color:#f1f5f9; padding:0; border-radius:12px; max-width:900px; max-height:90vh; display:flex; flex-direction:column; overflow:hidden; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; position:relative; }
+      .modal-header { position:sticky; top:0; display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:1rem 1.25rem; background:#0b1220; border-bottom:1px solid #334155; z-index:1; }
+      .modal-header h3 { margin:0; font-size:1rem; font-weight:700; color:#e2e8f0; }
+      .modal-actions { display:flex; gap:.5rem; }
+      .copy-btn, .modal-close { background:#334155; border:none; color:#f1f5f9; padding:.35rem .7rem; border-radius:6px; font-size:.85em; cursor:pointer; }
+      .copy-btn:hover, .modal-close:hover { background:#475569; }
+      .modal-body { padding:1rem 1.25rem; overflow:auto; }
+      .modal-body pre { white-space:pre-wrap; word-wrap:break-word; background:#0f172a; padding:1rem; border-radius:8px; font-size:.95em; color:#f8fafc; margin:0; }
     </style>
   </head>
 
@@ -37,7 +40,7 @@
     <div id="page-wrapper">
       <div id="header-wrapper">
         <header id="header" class="container">
-          <div id="logo"><h1><a href="index.html">Nick Perdue</a></h1></div>
+          <div id="logo"><h1><a href="index.html">Nicholas Perdue</a></h1></div>
           <nav id="nav">
             <ul>
               <li class="current"><a href="#top">Home</a></li>
@@ -53,13 +56,9 @@
       <div id="banner-wrapper">
         <div id="banner" class="box container">
           <div class="row">
-            <div class="col-7 col-12-medium">
-              <h1>Nick Perdue</h1>
-              <p class="lede">Geography • Remote Sensing • Data Visualization</p>
-              <a href="#projects" class="button large primary">View Projects</a>
-            </div>
-            <div class="col-5 col-12-medium" style="display:flex; justify-content:center;">
-              <img src="images/headshot.jpg" alt="Portrait of Nick Perdue" class="hero-avatar" />
+            <div class="col-12" style="text-align:center;">
+              <h1>Nicholas Perdue</h1>
+              <p class="lede">Department of Geography, Environment & Spatial Analysis<br>Cal Poly Humboldt</p>
             </div>
           </div>
         </div>
@@ -73,42 +72,38 @@
         </header>
         <div class="example-list">
           <button data-title="Zero-Shot Prompt" data-prompt="Summarize this article in 5 bullet points.">Zero-Shot Prompt</button>
-
           <button data-title="Few-Shot Prompt" data-prompt="I want you to answer questions about major flood events using short summaries. Here are two examples:\nExample 1:\nQ: What happened during the Johnstown Flood of 1889?\nA: The Johnstown Flood of 1889 occurred when the South Fork Dam failed after heavy rain. A massive wall of water destroyed the town of Johnstown, Pennsylvania. Over 2,200 people were killed, and thousands of homes were swept away. Relief efforts were led by the American Red Cross under Clara Barton.\nExample 2:\nQ: What was the impact of the Great Mississippi Flood of 1927?\nA: The Great Mississippi Flood of 1927 was caused by months of heavy rainfall. The Mississippi River broke levees across multiple states, displacing over 600,000 people. African American communities were disproportionately affected, and the disaster reshaped U.S. flood control policy.\nNow Answer This:\nQ: What happened during the Christmas Flood of 1964?">Few-Shot Prompt</button>
-
           <button data-title="Instructional Prompt (Journalistic)" data-prompt="Write a magazine-style feature article about the 1964 Christmas Flood in Humboldt County. Use vivid, emotional, and descriptive language as if you are a journalist for Rolling Stone. Focus on the human impact, the sense of chaos during the holiday season, and the cultural memory of the flood. Include quotes (imagined if necessary) from survivors and rescuers to bring the story to life.">Instructional Prompt (Journalistic)</button>
-
           <button data-title="Instructional Prompt (Government Report)" data-prompt="Write a government report summary about the 1964 Christmas Flood for the U.S. Department of the Interior. Use a formal and technical tone. Include key details such as precipitation levels, geographic areas affected, infrastructure damage, estimated casualties, and long-term policy implications for flood management. Present the information in clear, objective, and concise language.">Instructional Prompt (Government Report)</button>
-
           <button data-title="Role-Based Prompt (New Resident)" data-prompt="You are someone moving from a desert region to Humboldt County, California. You have never lived in a place with heavy rainfall or river systems before. Explain the history of flooding in the area, especially the 1964 Christmas Flood, and describe what a newcomer should know about current flood risks, emergency preparedness, and how living near rivers differs from living in the desert.">Role-Based Prompt (New Resident)</button>
-
           <button data-title="Role-Based Prompt (Insurance Agent)" data-prompt="You are an insurance agent tasked with writing a report to help set homeowner insurance premiums in Humboldt County, California. Use historical evidence from the 1964 Christmas Flood and more recent flood data to explain the flood risk profile. Include sections on: historical precedent, high-risk zones, climate change impacts, and recommendations for premium adjustments. Write in a professional, data-driven tone suitable for an internal company risk assessment.">Role-Based Prompt (Insurance Agent)</button>
-
           <button data-title="Contextual Prompt (Undergraduate)" data-prompt="This explanation is for an undergraduate geography class learning about natural disasters. Summarize the 1964 Christmas Flood in Humboldt County in plain, accessible language, focusing on causes, impacts, and lessons learned.">Contextual Prompt (Undergraduate)</button>
-
           <button data-title="Contextual Prompt (Local Newspaper)" data-prompt="This article will appear in a local Humboldt newspaper’s 60-year retrospective on the 1964 Christmas Flood. Write a community-focused piece that blends history with personal memory, honoring the resilience of local towns.">Contextual Prompt (Local Newspaper)</button>
-
           <button data-title="Contextual Prompt (Policy Brief)" data-prompt="This summary is intended for a California state government policy briefing on climate resilience. Describe the 1964 Christmas Flood as a historical case study, emphasizing the infrastructural damage, long-term policy impacts, and relevance for modern flood planning.">Contextual Prompt (Policy Brief)</button>
-
           <button data-title="Contextual Prompt (High School)" data-prompt="This text is meant for high school students studying California history. Explain the 1964 Christmas Flood in a way that is engaging, easy to follow, and connects to broader themes of human-environment interaction.">Contextual Prompt (High School)</button>
-
           <button data-title="High-Level Prompt" data-prompt="You are a local historian and scholar who has studied the archives, including the Humboldt Historical Society, Cal Poly Humboldt Special Collections, and other local and regional sources. I am newly arrived student in Humboldt County and would like to become more familiar with the history of floods in the area, get a sense of the conditions that caused the flood, and particular communities that were affected, understand the scale and damage of the flood, and understand the risk for future flood events. This is part of a class project where each student will be using AI to generate a local history of the area for a digital archive project. Generate a detailed report on the great flood of 1964 in Humboldt County CA. The report should be 3500-4000 words. I would like the returned document to have the following elements: 1) references, 2) links to pictures, maps, and documents, 3) tables where necessary, 4) be of professional quality. Here is a good example of an output about a large flood event in Asheville in 1916 https://www.ashevillenc.gov/news/100-years-after-the-flood-of-1916-the-city-of-asheville-is-ready-for-the-next-one/ Use clear and concise language in a formal academic tone with APA style citations. The rhetorical style should be ethos.">High-Level Prompt</button>
         </div>
       </section>
 
       <footer id="footer" class="container">
         <a id="contact"></a>
-        <p>© <span id="year"></span> Nick Perdue</p>
+        <p>© <span id="year"></span> Nicholas Perdue</p>
       </footer>
     </div>
 
     <!-- Modal -->
     <div id="modal" class="modal" style="display:none;">
-      <div class="modal-content">
-        <button class="modal-close" aria-label="Close">×</button>
-        <button class="copy-btn">Copy</button>
-        <h3 id="modal-title"></h3>
-        <pre id="modal-text"></pre>
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-header">
+          <h3 id="modal-title"></h3>
+          <div class="modal-actions">
+            <button class="copy-btn" aria-label="Copy prompt">Copy</button>
+            <button class="modal-close" aria-label="Close">×</button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <pre id="modal-text"></pre>
+        </div>
       </div>
     </div>
 
@@ -117,22 +112,22 @@
       const modalTitle = document.getElementById('modal-title');
       const modalText = document.getElementById('modal-text');
       const copyBtn = document.querySelector('.copy-btn');
+      const closeBtn = document.querySelector('.modal-close');
 
       document.querySelectorAll('.ai-examples button').forEach(btn => {
         btn.addEventListener('click', () => {
           modalTitle.textContent = btn.dataset.title;
           modalText.textContent = btn.dataset.prompt;
           modal.style.display = 'flex';
+          closeBtn.focus();
         });
       });
-      document.querySelector('.modal-close').addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-      modal.addEventListener('click', e => { if(e.target === modal) modal.style.display = 'none'; });
+      closeBtn.addEventListener('click', () => { modal.style.display = 'none'; });
+      modal.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
       copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(modalText.textContent).then(() => {
           copyBtn.textContent = 'Copied!';
-          setTimeout(()=> copyBtn.textContent='Copy', 1500);
+          setTimeout(() => (copyBtn.textContent = 'Copy'), 1500);
         });
       });
       document.getElementById('year').textContent = new Date().getFullYear();
