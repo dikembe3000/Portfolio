@@ -15,8 +15,12 @@
     <style>
       :root { --brand: #2563eb; }
       body, h1, h2, h3, h4, h5, h6, a, p, li, span { font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif; }
-      .button.primary { background: var(--brand) !important; border-color: var(--brand) !important; color:#fff !important; }
       .hero-avatar { max-width:260px; border-radius:18px; box-shadow:0 12px 30px rgba(0,0,0,.25); }
+
+      /* Hero Section */
+      #banner-wrapper { padding: 3.5em 0 2.5em; background:none !important; }
+      #banner h1 { font-size:2.8em; margin-bottom:.4em; font-weight:700; }
+      #banner p.lede { font-size:1.2em; color:#475569; margin:0; }
 
       /* AI Examples */
       .ai-examples .example-list { display:grid; gap:.75rem; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
@@ -40,7 +44,6 @@
     <div id="page-wrapper">
       <div id="header-wrapper">
         <header id="header" class="container">
-          <div id="logo"><h1><a href="index.html">Nicholas Perdue</a></h1></div>
           <nav id="nav">
             <ul>
               <li class="current"><a href="#top">Home</a></li>
