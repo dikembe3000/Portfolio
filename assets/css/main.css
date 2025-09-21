@@ -2114,6 +2114,16 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+/* Yellow background for title banner */
+#banner-wrapper {
+  background: #facc15; /* Tailwind amber-400 style yellow */
+  padding: 3em 0;
+}
+
+#banner h1, #banner p {
+  color: #111; /* dark text for contrast */
+}
+
 /* Footer */
 
 	#footer {
